@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambrose Nguyen Tuan Kiet : Calculator JS</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color:#0051ba;">
+    <div class="row d-flex flex-row" style="margin-left:0px;margin-right:0px;">
+        <div class="col-lg-5 d-flex justify-content-start align-items-center"><label class="col-form-label" style="font-size:28px;margin:10px;color:rgb(255,255,255);">Calculator JS</label></div>
+    </div>
+    <div style="height:40%;">
+        <div class="row" style="margin-right:0px;margin-left:0px;height:30%;">
+            <div class="col d-flex justify-content-start" style="background-color:#000000;height:10%;"><label class="col-form-label" style="color:#28c4d8;font-family:Roboto, sans-serif;" id="lbResult">Result</label></div>
+        </div>
+        <div class="row" style="margin-right:0px;margin-left:0px;height:70%;">
+            <div class="col d-flex justify-content-end" style="background-color:#000000;"><label class="col-form-label" style="font-size:55px;color:#70cee2;padding-top:0px;font-family:Roboto, sans-serif;" id="lbDigits">0.123456789</label></div>
+        </div>
+    </div>
+    <div class="d-flex flex-column align-items-stretch align-content-stretch" style="height:60%;">
+        <div class="row" style="margin:0px 0px;margin-top:10px;padding:0px 0px;">
+            <div class="col" style="padding-left:12px;padding-bottom:0px;"><button class="btn btn-primary" type="button" style="width:100%;background-color:#0072c6;height:100%;" id="btDel">DEL</button></div>
+            <div class="col" style="padding-right:15px;"><button class="btn btn-primary" type="button" style="width:100%;background-color:#0072c6;height:100%;" id="btClear">CLEAR</button></div>
+        </div>
+        <div class="row" style="margin:10px;padding:0px;padding-left:0px;padding-right:0px;margin-bottom:0px;">
+            <div class="col d-flex justify-content-center" style="padding-left:0px;padding-right:0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="padding:0px;width:100%;background-color:#0072c6;font-size:50px;height:100%;" id="bt7">7</button></div>
+            <div class="col d-flex" style="padding-right:0px;padding-left:0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt8">8</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt9">9</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="btPlus">+</button></div>
+        </div>
+        <div class="row" style="margin:10px;margin-top:0px;margin-bottom:0px;">
+            <div class="col" style="padding:0px 0px;padding-top:0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt4">4</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt5">5</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;background-color:#0072c6;font-size:50px;height:100%;" id="bt6">6</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;background-color:#0072c6;font-size:50px;height:100%;" id="btMinus">-</button></div>
+        </div>
+        <div class="row" style="margin:10px;margin-top:0px;margin-bottom:0px;">
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt1">1</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="bt2">2</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;background-color:#0072c6;font-size:50px;height:100%;" id="bt3">3</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;background-color:#0072c6;font-size:50px;height:100%;" id="btMulti">*</button></div>
+        </div>
+        <div class="row" style="margin:10px;margin-top:0px;">
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;height:100%;" id="btPoint">.</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;height:100%;padding:0px 0px;background-color:#0072c6;font-size:50px;" id="bt0">0</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;height:100%;background-color:#0072c6;font-size:50px;" id="btEqual">=</button></div>
+            <div class="col" style="padding:0px 0px;"><button class="btn btn-primary" type="button" data-bs-hover-animate="pulse" style="width:100%;height:100%;background-color:#0072c6;font-size:50px;" id="btDiv">/</button></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script>
+        // You can also require other files to run in this process
+        require('./assets/js/jquery.min.js')
+        require('./dist/renderer.js')
+      </script>
+</body>
+
+</html>
